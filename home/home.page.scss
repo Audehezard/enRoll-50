@@ -1,0 +1,42 @@
+ion-title { text-align: center !important; }
+.bg-img {
+  padding: 1px;
+  height: 100%;
+  width: 100%;
+  background-image: url('../../assets/media/argo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  color: #000000;
+}
+h1{
+  font-size:28px;
+  padding-top: 10px;
+}
+h2{
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 30px;
+}
+.add-button {
+  --background: #7AB0E6;
+  width: 80%;
+  --color: #ffffff;
+  margin-left: 10%;
+}
+.list{
+  --ion-background-color: rgba(250, 235, 215, 0.5);
+  max-height: 250px;
+  overflow: auto;
+  margin-top:50px;
+  margin-left: 5px;
+  margin-right: 5px;
+  border-radius: 5%;
+}
+h3{
+ font-size: large;
+  font-weight: bolder;
+}
+
+
+

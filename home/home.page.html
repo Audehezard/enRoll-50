@@ -1,0 +1,48 @@
+<ion-header [translucent]="true">
+<ion-toolbar>
+  <ion-title>
+    EnRoll 50
+  </ion-title>
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">EnRoll 50</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <div class = "bg-img">
+    <h1><b>Qui sera des Argonôtres ?</b></h1>
+    <h2>Rôle d'équipage<br> de l'Argo</h2>
+
+    <ion-button *ngIf="!addHeroName" (click)="showForm()" expand="block" class="add-button">
+      <ion-icon name="add" slot="start"></ion-icon>
+      Ajouter un argonaute
+    </ion-button>
+
+    <ion-button *ngIf="addHeroName" (click)="showForm()" expand="block" class="add-button">
+      <ion-icon name="close" slot="start"></ion-icon>
+      Fermer
+    </ion-button>
+
+    <ion-card *ngIf="addHeroName">
+      <ion-item lines="none">
+        <ion-input [(ngModel)]="heroName" placeholder="Nom du héros"></ion-input>
+        <ion-button (click)="addHeroNameToFirebase()" shape="round" slot="end">
+          <ion-icon slot="icon-only" name="person-add-outline"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-card>
+    <div class="list">
+      <ion-list *ngFor="let item of crewList">
+        <ion-item lines="none" class ="heroes">
+          <ion-label >
+            <h3>{{item.text}}</h3>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </div>
+
+  </div>
+</ion-content>
